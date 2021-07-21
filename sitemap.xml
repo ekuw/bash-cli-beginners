@@ -2,10 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https:://ekuw.github.io/bash-cli-beginners/categories/</loc>
-  </url><url>
     <loc>https:://ekuw.github.io/bash-cli-beginners/</loc>
-  </url><url>
-    <loc>https:://ekuw.github.io/bash-cli-beginners/tags/</loc>
   </url>
 </urlset>
