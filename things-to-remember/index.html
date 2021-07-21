@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+
+<html>
+	
+	<head>
+	<title>Introduction to the bash command line interface</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/bash-cli-beginners/assets/css/main.min.css">
+	
+	
+	
+	<noscript><link rel="stylesheet" href="/bash-cli-beginners/assets/css/noscript.min.css" /></noscript>
+	
+</head>
+
+
+	<body class="is-preload">
+
+		
+		<div id="wrapper" class="divided">
+        
+<section class="banner style3 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
+    <div class="content">
+        <h1>Things to remember</h1>
+        <p class="major">Some tips, tricks, and things to keep in mind when using the command line interface
+</p>
+        <p>The command line interface can seem intimidating for users who are used to navigating their operating systems using <b>G</b>raphical <b>U</b>ser <b>I</b>nterfaces (GUIs).
+Some methods and conventions may appear counter-intuitive. In this section we note some of the features of the command line that might not be obvious to beginners,
+and provide a glossary of some useful tips and shortcuts.
+</p>
+        <ul class="actions stacked">
+            <li><a href="#body" class="button large wide smooth-scroll-middle">Learn more</a>
+        </ul>
+    </div>
+    <div class="image fit">
+        <img src="/bash-cli-beginners/images/bulb_on.png" alt="" />
+    </div>
+</section>
+
+        <section class="wrapper style1 orient-left content-align-left inner">
+  <div class="inner">
+    <section id="body">
+      <h2>Navigation</h2>
+      <p>When navigating a computer file system using a GUI, users typically <b>click through a graphical representation of the file system</b> to select folders and open files using the mouse.
+This could be using e.g. <i>Windows Explorer</i> on a Windows machine or <i>Finder</i> on OSX.
+To use the command line will mean <b>using the mouse less</b> and the <b>keyboard more</b>.
+You cannot position your cursor on the command line terminal by moving your mouse and clicking at a given location.
+The left and right arrows can be used to move the cursor horizontally along a line of text, and the up and down arrows can be used to scroll through your command history.<br>
+<br />
+
+Tab completion is also a thing on the command line, so if you start to type a command (or the path to a folder, a file name, ...) and hit the tab key it will autocomplete (or list autocompletion options). Use of this feature will save time and typos, so get comfortable using it. <br>
+<br />
+
+Here are some handy navigation tricks to remember:
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th><h3>Function</h3></th>
+<th><h3>Command</h3></th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Jump to the beginning of a line</td>
+        <td><code>Ctrl-A</code></td>
+    </tr>
+    <tr>
+        <td>Jump to the end of a line</td>
+        <td><code>Ctrl-E</code></td>
+    </tr>
+    <tr>
+        <td>Delete character under the cursor</td>
+        <td> <code>Ctrl-D</code> or hit <b>delete</b></td>
+    </tr>
+    <tr>
+        <td>Clear the terminal screen</td>
+        <td><code>Ctrl-L</code> or type <code>clear</code></td>
+    </tr>
+    <tr>
+        <td>Kill the current process running in the terminal</td>
+        <td><code>Ctrl-C</code></td>
+    </tr>
+    <tr>
+        <td>Suspend/pause the current process running in the terminal</td>
+        <td><code>Ctrl-Z</code></td>
+    </tr>
+    <tr>
+        <td>Close the bash terminal</td>
+        <td><code>Ctrl-D</code> or type <code>exit</code></td>
+    </tr>
+    <tr>
+        <td>Cut the part of the current line after the cursor</td>
+        <td><code>Ctrl-K</code></td>
+    </tr>
+    <tr>
+        <td>Paste the last thing you cut from the clipboard (here the y means "yank")</td>
+        <td><code>Ctrl-Y</code></td>
+    </tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+
+            </tr>
+        </tfoot>
+    </table>
+ </div>
+
+<h2> Special characters and whitespace </h2>
+Some characters have <b>special meanings</b> when used on the command line, and it is important to be aware of these <i>special characters</i>. Although a list containing the meanings of all special characters is out-of-scope for this introductory material, here are some examples of special characters:
+<pre><code>*~#`$&() <>{};'"\|/
+</code></pre>	
+<b>Note that the above list includes the whitespace</b>. This is because commands and arguments that are passed to the command line are separated by a whitespace. The shell splits the user input on whitespaces into individual pieces. From these pieces the shell determines what instruction to issue to the operating system. The whitespace can therefore be thought of as the command line <b>separator character</b>, which makes <b>the inclusion of whitespaces in file names and directory paths problematic</b>. The presence of whitespace in these areas often causes issues for new users learning to use the command line. To avoid hitting such issues try to get into the habit of <b>using underscores in place of whitespace</b> in file, directory and variable names. Note that the presence of a whitespace in file or directory name will also cause problems for tab-completion usage (the autocompletion will halt at the whitespace, which will then need to be escaped, as discussed below).<br>
+<br />
+With the whitespace caveat addressed, it is helpful at this stage to simply be aware that these characters have special meanings. This means that if you want to use these characters within a string, i.e. <i>without</i> using their special meanings, then you need to treat these characters... well, <i>specially</i>. <br>
+<br />
+One way of using these characters literally is to use the <b>backslash-escape</b> method. To backslash-escape a special character a backslash needs to immediately precede the character in question. For example, to backslash-escape the wildcard character <code>*</code>, one would type <code>\*</code>.<br>
+<br />
+Another method is to <b>quote</b> the character. This means doing exactly as it sounds, and surrounding the special character with quotation marks. For the example above, this would mean typing <code>"*"</code>. Similarly, when faced with a folder called <code>My Files</code>, you would need to escape the special meaning of the whitespace by quoting it, typing <code>"My Files"</code>. <br>
+
+<br />
+
+<h2> Words of caution </h2>
+
+The command line represents a way for you to deliver commands to your operating system. This means that any operation that you perform using the command line is a <i>real operation</i>.
+That is, if you delete that folder using the command line, that is just the same as if you right-click in Windows Explorer and delete that folder,
+but there is <b>no recycle bin</b> and <b>no undo button</b>. So <b>take care with your commands</b>, make sure you understand what you are doing, as some can cause <b>permanent data loss</b>.
+</p>
+    </section>
+    <ul class="actions">
+	<li><a href="/bash-cli-beginners/#contents" class="button primary">Contents</a></li>
+        <li><a href="/bash-cli-beginners/" class="button">Next</a></li>
+      </ul>
+
+  </div>
+</end>
+
+        
+<footer class="wrapper style1 align-center">
+    <div class="inner">
+        <ul class="icons">
+            <li><a target="_blank" href="https://github.com/ekuw/" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+            
+            
+            <li><a target="_blank" href="https://www.linkedin.com/in/emma-kuwertz-52295880/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            
+        </ul>
+        <p>Hugo Story &copy; 2020 <a target="_blank" href="https://github.com/caressofsteel/">CaressOfSteel</a><span class="footerspacer icon fad fa-diamond"></span>
+            Ported from <a target="_blank" href="https://html5up.net/uploads/demos/story/">Story</a> by HTML5UP<span class="footerspacer icon fad fa-diamond"></span>
+            Images courtesy of <a target="_blank" href="https://unsplash.com">Unsplash</a></p>
+</div>
+</footer>
+
+		
+		</div>
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<script src='/bash-cli-beginners/assets/js/bundle.min.js'></script>
+
+
+	</body>
+</html>

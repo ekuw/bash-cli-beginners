@@ -3,5 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ekuw.github.io/bash-cli-beginners/</loc>
+  </url><url>
+    <loc>https://ekuw.github.io/bash-cli-beginners/launching-the-terminal/</loc>
+  </url><url>
+    <loc>https://ekuw.github.io/bash-cli-beginners/things-to-remember/</loc>
+  </url><url>
+    <loc>https://ekuw.github.io/bash-cli-beginners/why-use-the-command-line/</loc>
   </url>
 </urlset>
