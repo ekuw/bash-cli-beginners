@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+	
+	<head>
+	<title>Introduction to the bash command line interface</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/bash-cli-beginners/assets/css/main.min.css">
+	
+	
+	
+	<noscript><link rel="stylesheet" href="/bash-cli-beginners/assets/css/noscript.min.css" /></noscript>
+	
+</head>
+
+
+	<body class="is-preload">
+
+		
+		<div id="wrapper" class="divided">
+        
+<section class="banner style1 orient-left content-align-left image-position-left fullscreen onload-image-fade-in onload-content-fade-right">
+    <div class="content">
+        <h1>The command prompt and commands</h1>
+        <p class="major">The command prompt and commands explained
+</p>
+        <p>A terminal provides a command prompt, which represents the input field for users to enter commands. The prompt also provides useful orientation information to the user. 
+</p>
+        <ul class="actions stacked">
+            <li><a href="#body" class="button large wide smooth-scroll-middle">Get Started</a>
+        </ul>
+    </div>
+    <div class="image fit">
+        <img src="/bash-cli-beginners/images/bash.png" alt="" />
+    </div>
+</section>
+
+        <section class="wrapper style1 orient-left content-align-left inner">
+  <div class="inner">
+    <section id="body">
+      <h2>The command prompt</h2>
+      <p>The command prompt denotes the location of expected user input in the command line terminal. As noted in earlier sections, users cannot change the position of this using a mouse. A typical command prompt might look something like this:
+<pre><code>bob@IT1:~$</code></pre>
+
+Breaking this down:
+
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Username</b></td>
+<td><code>bob</ocode></td>
+<td>This is the username of the computing account holder.</td>
+</tr>
+<tr>
+<td><b>Computer name</b></td>
+<td><code>IT1</code></td>
+<td>This is the name of the computer, or the <i>hostname</i>.</td>
+</tr>
+<tr>
+<td><b>Current location</b></td>
+<td><code>~</code></td>
+<td>This is the users current location in the file system, i.e. the path of the current directory. Recall that <code>~</code> is a special character? It denotes the <b>home directory</b>, which is usually the location in which users will find themselves by default when launching a terminal session.</td>
+</tr>
+<tr>
+<td><b>$</b></td>
+<td><code>$</code></td>
+<td>This signifies that the terminal is ready for user input. There should be a flashing cursor to the right of the dollar sign. Code snippets provided online usually include a leading <code>$</code>.
+In most cases this should not be interpreted as part of the command, but rather a representation of the command prompt itself.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+
+            </tr>
+        </tfoot>
+    </table>
+ </div>
+
+
+<h2>Commands, options and arguments</h2>
+
+Most of the time a command issued on the command line will have the following syntax:
+<pre><code>
+command (options) arguments
+</code></pre>
+for example:
+<pre><code>
+grep -R "Curriculum Vitae" Documents
+</code></pre>
+
+Here the <b>command</b> is <code>grep</code>, a super-useful command that will search plain text data files for lines that match a given regular expression. In this case that regular expression is "Curriculum Vitae". The <code>-R</code> is an <b>option</b> or <b>flag</b>, and these are usually specified with a leading hyphen. The available options depend on the command. In this case the <code>-R</code> indicates that a <i>recursive</i> search has been requested (usually grep takes single files as input, but the recursive option allows whole directories to be passed to grep). In this example the search is being performed over all text-based files in the "Documents" directory. Both "Documents" and "Curriculum Vitae" are <b>arguments</b> that have been passed to the <code>grep</code> command.
+</p>
+    </section>
+    <ul class="actions">
+	<li><a href="/bash-cli-beginners/#contents" class="button primary">Contents</a></li>
+        <li><a href="/bash-cli-beginners/navigating-the-file-system" class="button">Next</a></li>
+      </ul>
+
+  </div>
+</end>
+
+        
+<footer class="wrapper style1 align-center">
+    <div class="inner">
+        <ul class="icons">
+            <li><a target="_blank" href="https://github.com/ekuw/" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+            
+            
+            <li><a target="_blank" href="https://www.linkedin.com/in/emma-kuwertz-52295880/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            
+        </ul>
+        <p>Hugo Story &copy; 2020 <a target="_blank" href="https://github.com/caressofsteel/">CaressOfSteel</a></span></p>
+
+</div>
+</footer>
+
+
+		
+		</div>
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<script src='/bash-cli-beginners/assets/js/bundle.min.js'></script>
+
+
+	</body>
+</html>

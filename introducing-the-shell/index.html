@@ -26,48 +26,51 @@
 		
 		<div id="wrapper" class="divided">
         
-<section class="banner style3 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+<section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
     <div class="content">
-        <h1>Starting a terminal session</h1>
-        <p class="major">How to launch a terminal session and access the command line interface
+        <h1>Introducing the shell</h1>
+        <p class="major">The kernel, the shell and the command line terminal
 </p>
-        <p>All operating systems offer a terminal application. This introduction focuses on commands for a Unix-style shell. For Windows users this will require installing a bash shell. 
+        <p>User-issued commands are entered into the terminal for the shell to interpret and translate so that they can be communicated to the operating system. 
 </p>
         <ul class="actions stacked">
             <li><a href="#body" class="button large wide smooth-scroll-middle">Get Started</a>
         </ul>
     </div>
     <div class="image fit">
-        <img src="/bash-cli-beginners/images/applications_terminal.png" alt="" />
+        <img src="/bash-cli-beginners/images/kernel.png" alt="" />
     </div>
 </section>
 
         <section class="wrapper style1 orient-left content-align-left inner">
   <div class="inner">
     <section id="body">
-      
-      <p>How you launch the command line interface will depend on which operating system (OS) you are using.
-
+      <h2>The kernel and the shell</h2>
+      <p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr>
-<th><h3>OS</h3></th>
-<th><h3>How to access a bash terminal</h3></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><b>OS X</b></td>
-<td>In Finder go to <code>Applications -> Utilities -> Terminal</code>, or search Terminal in Launchpad or Spotlight</td>
+<td><b>Kernel</b></td>
+<td>The kernel is at the core of a computer operating system, controlling memory allocation, the running of processes and the system hardware. It is the layer of the operating system that <b>connects the system hardware to the computer software</b>.</td>
 </tr>
 <tr>
-<td><b>Linux</b></td>
-<td>The keyboard shortcut <code>Ctrl+Alt+T</code> is the quickest way to open a terminal when using Linux.</td>
+<td><b>Shell</b></td>
+<td>The shell is the layer between the user and the kernel. It provides an interface for the the user to <b>issue commands to the operating system</b>. </td>
 </tr>
 <tr>
-<td> <b>Windows</b></td>
-<td>Most Windows systems have <i>Command Prompt</i> as a native command line interface. Newer distributions also have <i>PowerShell</i>. Since this material focuses on Unix-like shells rather than DOS-like shells, these applications are not covered here. Instead Windows users should install a bash shell. Newer Windows distributions have a terminal offered with <a href="https://docs.microsoft.com/en-us/windows/wsl/about"><i>Windows Subsystem for Linux</i></a>. Otherwise, <a href="https://www.atlassian.com/git/tutorials/git-bash"><i>Git Bash</i></a> provides a bash shell. </td> 
+<td> <b>Bash</b></td>
+<td>Bash stands for <b>B</b>ourne <b>a</b>gain <b>sh</b>ell, and is a unix shell and command language. Bash is a POSIX (Portable Operating System Interface) compliant shell, meaning that it conforms to standards set out to <b>maintain compatibility between operating systems</b>.</td>
+</tr>
+<tr>
+<td> <b>Terminal</b></td>
+<td>The terminal can be thought of as the <b>graphical representation of the shell</b>. It is the application with which users can issue text-based commands that the shell can then interpret and translate before passing them to the kernel.</td>
 </tr>
 </tbody>
 <tfoot>
@@ -82,7 +85,7 @@
     </section>
     <ul class="actions">
 	<li><a href="/bash-cli-beginners/#contents" class="button primary">Contents</a></li>
-        <li><a href="/bash-cli-beginners/things-to-remember/" class="button">Next</a></li>
+        <li><a href="/bash-cli-beginners/launching-the-terminal" class="button">Next</a></li>
       </ul>
 
   </div>

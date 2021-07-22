@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+
+<html>
+	
+	<head>
+	<title>Introduction to the bash command line interface</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/bash-cli-beginners/assets/css/main.min.css">
+	
+	
+	
+	<noscript><link rel="stylesheet" href="/bash-cli-beginners/assets/css/noscript.min.css" /></noscript>
+	
+</head>
+
+
+	<body class="is-preload">
+
+		
+		<div id="wrapper" class="divided">
+        
+<section class="banner style1 orient-left content-align-left image-position-left fullscreen onload-image-fade-in onload-content-fade-right">
+    <div class="content">
+        <h1>Navigating the file system</h1>
+        <p class="major">How to move between folders using the terminal
+</p>
+        <p>A computer file system is navigable via the command line interface. Understanding how to find your current location and move between system folders is an important first step towards command line proficiency.
+</p>
+        <ul class="actions stacked">
+            <li><a href="#body" class="button large wide smooth-scroll-middle">Get Started</a>
+        </ul>
+    </div>
+    <div class="image fit">
+        <img src="/bash-cli-beginners/images/filesystem.png" alt="" />
+    </div>
+</section>
+
+        <section class="wrapper style1 orient-left content-align-left inner">
+  <div class="inner">
+    <section id="body">
+      <h2>Where am I?</h2>
+      <p>The command line interface gives a user access to the file system tree, just like GUIs like Windows Explorer and Finder.
+It is important to be able to quickly understand where you are within the computer file system when working with the command line, as this will impact the tasks you are able to carry out.  If you launch a new terminal session you should usually be able to establish where you are from the command prompt. Where this is ambiguous, you can try using the "print working directory" command.
+The output from this command will then be printed out in the terminal window below where the command was executed, and the command prompt will reappear beneath that output. For example:
+<pre><code>$ pwd
+/Users/sp20532
+$
+</code></pre>
+This command prints the <b>absolute path</b>, which can be thought of as the <b>full address</b> to your current location. <b>Relative paths</b> can be used to describe the address of a file <b>relative to your current location</b>. There are short hand notations to help navigate and spell-out path addresses:
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~</code></td>
+<td>Your home folder.</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Current working directory.</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>Current working directory's parent, one folder "back" from the current location.</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>The directory most recently navigated to before entering the current working directory.</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>The root folder containing the entire file system.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+
+            </tr>
+        </tfoot>
+    </table>
+ </div>
+
+ There are a couple of essential commands that are needed to explore and move around the file system:
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls</code></td>
+<td>This command lists the content within a specified directory. Simply typing <code>ls</code> will list the contents of the current working directory, while <code>ls ..</code> will list the contents of the directory one folder above the current working directory in the file system tree.</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>This command is used to <b>c</b>hange <b>d</b>irectory. To navigate one directory up in the file system tree one could type <code>cd ..</code>, and <code>cd ~</code> to navigate to the home directory.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+
+            </tr>
+        </tfoot>
+    </table>
+ </div>
+
+<p style="text-align:center;"><img src="/bash-cli-beginners/images/filesystem.png" alt="" width=900" height="700"></p>
+</p>
+    </section>
+    <ul class="actions">
+	<li><a href="/bash-cli-beginners/#contents" class="button primary">Contents</a></li>
+        <li><a href="/bash-cli-beginners/" class="button">Home</a></li>
+      </ul>
+
+  </div>
+</end>
+
+        
+<footer class="wrapper style1 align-center">
+    <div class="inner">
+        <ul class="icons">
+            <li><a target="_blank" href="https://github.com/ekuw/" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+            
+            
+            <li><a target="_blank" href="https://www.linkedin.com/in/emma-kuwertz-52295880/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            
+        </ul>
+        <p>Hugo Story &copy; 2020 <a target="_blank" href="https://github.com/caressofsteel/">CaressOfSteel</a></span></p>
+
+</div>
+</footer>
+
+
+		
+		</div>
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<script src='/bash-cli-beginners/assets/js/bundle.min.js'></script>
+
+
+	</body>
+</html>
