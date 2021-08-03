@@ -134,6 +134,7 @@ Since this material focuses on a Unix-style shell, there are a couple of key <b>
 <br />
 <li>The Windows file system uses a <b>backslash</b> <code>\</code> as a directory separator, while Unix-based systems use a <b>forward slash</b> <code>/</code>.</li>
 <li>The Windows file system is <b>not case-sensitive</b>, while Unix-based systems <b>are case-sensitive</b>.</li>
+<li>Text files (including e.g. <code>.txt</code>, <code>.csv</code>, <code>.dat</code>, ...) created in a Windows/DOS environment have different line endings than those created on unix-style operating systems. Windows uses a <b>carriage return and line feed</b> (CRLF: <code>\r\n</code>), while unix uses only <b>line feed</b> (LF: <code>\n</code>). This means that if a multi-line text file is created using Git Bash (e.g. via piping the output of a script to a text file), the line-endings in that file will not be interpreted correctly if opened in notepad, for example. You can convert files from unix to DOS style using the <code>unix2dos</code> command, or from DOS to unix style using the <code>dos2unix</code> command.</li>
 
 <br />
 
@@ -162,8 +163,8 @@ but there is <b>no recycle bin</b> and <b>no undo button</b>. So <b>take care</b
             <li><a target="_blank" href="https://www.linkedin.com/in/emma-kuwertz-52295880/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
             
         </ul>
-        <p>Hugo Story &copy; 2020 <a target="_blank" href="https://github.com/caressofsteel/">CaressOfSteel</a></span></p>
-
+	<p>Hugo Story &copy; 2020 <a target="_blank" href="https://github.com/caressofsteel/">CaressOfSteel</a><span class="footerspacer icon fad fa-diamond"></span>
+          Ported from <a target="_blank" href="https://html5up.net/uploads/demos/story/">Story</a> by HTML5UP</p>
 </div>
 </footer>
 
